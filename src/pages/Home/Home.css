@@ -1,0 +1,101 @@
+.fade {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+/********************animation of video*******************/
+                     
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(10px); }
+    }
+    @keyframes floatX {
+      0%, 100% { transform: translateX(0); }
+      50%      { transform: translateX(10px); }
+    }
+    @keyframes bulbGlow {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+        filter: brightness(1);
+      }
+      50% {
+        transform: scale(1.07);
+        opacity: 0.84;
+        filter: brightness(1.2);
+      }
+    }
+
+/******************tyer*****************/
+
+
+@keyframes rollFullLeftRight {
+  0% {
+    transform: translateX(-10px) rotate(0deg); /* starts fully off-screen to the left */
+  }
+  50% {
+    transform: translateX(calc(100vw - 150px)) rotate(720deg); /* right edge */
+  }
+  100% {
+    transform: translateX(-5px) rotate(-720deg); /* back to left edge */
+  }
+}
+
+
+/************star rotation*****/
+     @keyframes spin360 {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+
+   .hover-arrow {
+  position: absolute;
+  top: 20px;
+  left: -50px;
+  width: 100px;
+  height: 30px;
+  object-fit: contain;
+  z-index: 10;
+  pointer-events: none;
+  transition: left 0.4s ease;
+}
+
+.white-box:hover .hover-arrow {
+  left: -20px;
+}
+
+
+@keyframes circularMove {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(30px, -30px); }
+  50%  { transform: translate(60px, 0); }
+  75%  { transform: translate(30px, 30px); }
+  100% { transform: translate(0, 0); }
+}
+
+.circle-motion {
+  animation: circularMove 5s linear infinite;
+  display: inline-block;
+}
+
+
+/************spring**************/
+@keyframes moveDiagonal {
+  0% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: right top;
+  }
+}
+
+.someBox {
+  animation: moveDiagonal 10s linear infinite alternate;
+}

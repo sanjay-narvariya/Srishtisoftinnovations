@@ -1,0 +1,120 @@
+/* Equipment Main Container */
+.RentalEquipment {
+  margin-top: 0rem;
+  background: transparent;
+  background-size: 100% 100%;
+  animation: gradientBG 30s ease infinite;
+  border-radius: 1rem;
+}
+
+
+
+/* Title Section */
+.equipment-title1 {
+  text-align: start;
+  padding-left: 6rem;
+  margin-left: 30px; /* Default for xs/sm screens */
+  
+}
+
+/* Medium screens and above (like md = 768px or 900px depending on your framework) */
+@media (min-width: 768px) {
+  .equipment-title1 {
+    margin-left: 90px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .equipment-title1 {
+    padding-left: 1rem; /* Less padding for small screens */
+    text-align: start;  /* Optional: adjust alignment */
+  }
+}
+
+
+.equipment-title1 h3 {
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.equipment-title1 h1 {
+  font-weight: bold;
+}
+
+.equipment-title1 p {
+  letter-spacing: 1px;
+  width: 50%;
+  margin: auto;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 1500px) {
+  .equipment-title1 p {
+    width: 80%;
+  }
+ 
+}
+
+@media (max-width: 768px) {
+  .equipment-title1 p {
+    width: 90%;
+  }
+ 
+}
+
+@media (max-width: 576px) {
+  .equipment-title1 p {
+    width: 95%;
+  }
+
+}
+
+/************************************/
+
+.about-sec1 {
+  margin: 2rem;
+}
+
+.item1 {
+  background: aliceblue;
+  padding: 20px;
+  height: 220px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  display:'flex';
+}
+
+.item1:hover {
+  background: rgb(170, 139, 139);
+  transform: scale(1.1);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .item1 {
+    margin-bottom: 1rem;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .item1 h4 {
+    font-size: 12px;
+    margin-top: 1rem;
+  }
+
+  .sec2 {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-sec1 {
+    margin-left: 0rem;
+  }
+}
+
