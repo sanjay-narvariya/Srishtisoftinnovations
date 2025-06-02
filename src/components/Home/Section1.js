@@ -38,7 +38,7 @@ export default function Section1() {
         <div className="RentalEquipment" >
             <div className="row">
                 <div className="equipment-title" >
-                    <h3 style={{background:'#52ade5', borderRadius:'15px',width:'82px',padding:'5px',fontSize:'15px'}}>Spotlight</h3>
+                    <h3 style={{background:'#52ade5', borderRadius:'15px',width:'90px',padding:'5px',fontSize:'15px'}}>Spotlight</h3>
                     <h1>SUCCESS STORIES  🎉 </h1>
                 </div>
 

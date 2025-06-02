@@ -372,11 +372,11 @@ export default function Home() {
                                 elevation={24}
                                 sx={{
                                     background: '#fff',
-                                    width: { xs: '60%', sm: '250px' },
-                                    height: 'auto',
+                                    width: { xs: '65%', sm: '250px' },
+                                    height: { xs: '42%', sm: 'auto' },
                                     position: 'absolute',
                                     top: { xs: '65%', sm: '120px' },
-                                    left: { xs: '40%', sm: '250px' },
+                                    left: { xs: '32%', sm: '250px' },
                                     borderRadius: '8px',
                                     pointerEvents: 'none',
                                     animation: 'floatX 2s ease-in-out infinite',
@@ -403,7 +403,7 @@ export default function Home() {
                                         justifyContent: 'flex-start',
                                         gap: 1,
                                         flexWrap: 'wrap',
-                                        marginLeft: '-20px'
+                                        marginLeft: '-40px'
                                     }}
                                 >
                                     {imageData.map((image, index) => (
@@ -413,7 +413,7 @@ export default function Home() {
                                             alt="Descriptive alt text"
                                             style={{
                                                 position: 'absolute',
-                                                top: '60px',
+                                                top: isMobile ? '40px' : '60px',
                                                 left: `${image.left}px`,
                                                 width: image.src === "/2.png" ? '45px' : '50px',
                                                 height: '45px',
@@ -441,7 +441,7 @@ export default function Home() {
                                 alt="Descriptive alt text"
                                 sx={{
                                     position: 'absolute',
-                                    top: { xs: '1350px', sm: '1150px', md: '300px', lg: '300px' },
+                                    top: { xs: '1400px', sm: '1150px', md: '300px', lg: '300px' },
                                     left: { xs: 'calc(10% - 30px)', sm: 'calc(10% - 35px)', md: '950px', lg: '950px' },
                                     width: { xs: '60px', sm: '70px', md: '80px', lg: '80px' },
                                     height: { xs: '60px', sm: '70px', md: '80px', lg: '80px' },
@@ -458,7 +458,7 @@ export default function Home() {
                             <Item
                                 elevation={24}
                                 sx={{
-                                    mt: { xs: '70px', sm: '60px', md: 1 },
+                                    mt: { xs: '100px', sm: '60px', md: 1 },
                                     ml: { xs: '90px', sm: '90px', md: '200px' }, // Left margin only on medium+ screens
                                     // mr: { xs: 'auto', sm: 'auto' }, // Center horizontally on small screens
                                     // marginTop: '5px',
