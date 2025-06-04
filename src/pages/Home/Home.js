@@ -17,6 +17,8 @@ import Section1 from "../../components/Home/Section1";
 import Section2 from "../../components/Home/Section2";
 import Section3 from "../../components/Home/Section3";
 import Section4 from "../../components/Home/Section4";
+import Section5 from "../../components/Home/Section5";
+import Section6 from "../../components/Home/Section6";
 
 
 
@@ -516,7 +518,7 @@ export default function Home() {
                                     sx={{
                                         position: 'fixed',
                                         top: { xs: '250px', sm: '200px' },
-                                        left: isMobile?'190px':'50%',
+                                        left: isMobile ? '190px' : '50%',
                                         transform: 'translateX(-50%)',
                                         backgroundColor: '#4caf50',
                                         color: 'white',
@@ -544,9 +546,9 @@ export default function Home() {
                                     sx={{
                                         position: 'absolute',
                                         top: '50%',
-                                        left: isMobile?'190px':'50%',
+                                        left: isMobile ? '190px' : '50%',
                                         transform: 'translate(-50%, -50%)',
-                                        width: { xs: '60%', sm: '60%', md: 400 }, // ✅ better responsiveness
+                                        width: { xs: '72%', sm: '72%', md: 500 }, // ✅ better responsiveness
                                         bgcolor: 'background.paper',
                                         borderRadius: '12px',
                                         boxShadow: 24,
@@ -737,6 +739,28 @@ export default function Home() {
                     }}
                 >
                     <Section4 />
+                </Box>
+
+
+                <Box
+                    sx={{
+                        marginTop: '50px',
+                        display: 'flex',
+                        width: '100%',
+                    }}
+                >
+                    <Section5 />
+                </Box>
+
+
+                <Box
+                    sx={{
+                        marginTop: '50px',
+                        display: 'flex',
+                        width: '100%',
+                    }}
+                >
+                    <Section6 />
                 </Box>
 
 

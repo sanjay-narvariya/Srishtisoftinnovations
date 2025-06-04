@@ -83,10 +83,27 @@ function Header({ darkMode, setDarkMode }) {
         <>
             {/* Dark Mode Toggle */}
             <div className="darkmode_float">
-                <IconButton onClick={() => setDarkMode(!darkMode)} sx={{ color: "white" }}>
+                <IconButton
+                    onClick={() => setDarkMode(!darkMode)}
+                    className={darkMode ? 'ring-sun' : 'ring-moon'}
+                    sx={{
+                        color: 'white',
+                        backgroundColor: '#182C61',
+                        borderRadius: '50%',
+                        p: 1.5,
+                        position: 'relative',
+                        zIndex: 1,
+                        overflow: 'visible',
+                        '&:hover': {
+                            backgroundColor: '#7b61a0',
+                        },
+                    }}
+                >
                     {darkMode ? <FaSun /> : <FaMoon />}
                 </IconButton>
             </div>
+
+
 
             <a
                 href="https://api.whatsapp.com/send?phone=8504069643"
@@ -101,7 +118,7 @@ function Header({ darkMode, setDarkMode }) {
             </a>
 
 
-            <Box sx={{ textAlign: 'center', background: '#ffcccc', boxShadow: 'inherit', height:'80%' }}>
+            <Box sx={{ textAlign: 'center', background: '#ffcccc', boxShadow: 'inherit', height: '80%' }}>
                 <Typography variant="h6" sx={{ my: 2 }}>
                     SrishtiSoft
                 </Typography>
@@ -453,25 +470,25 @@ function Header({ darkMode, setDarkMode }) {
 
                         {/* Phone & Theme Toggle */}
                         <Button>
-    <div className="phone-button">
-        <FaPhoneAlt style={{ fontSize: '1.5rem', color: '#941717' }} />
-        <a
-            href="tel:+918504069643"
-            style={{
-                color: '#fff',
-                fontSize: '1rem',
-                textDecoration: 'none',
-                marginLeft: '8px',
-            }}
-        >
-            8504069643
-        </a>
-    </div>
-</Button>
+                            <div className="phone-button">
+                                <FaPhoneAlt style={{ fontSize: '1.5rem', color: '#941717' }} />
+                                <a
+                                    href="tel:+918504069643"
+                                    style={{
+                                        color: '#fff',
+                                        fontSize: '1rem',
+                                        textDecoration: 'none',
+                                        marginLeft: '8px',
+                                    }}
+                                >
+                                    8504069643
+                                </a>
+                            </div>
+                        </Button>
 
 
 
-                        <IconButton
+                        {/* <IconButton
                             onClick={() => setDarkMode(!darkMode)}
                             sx={{
                                 color: '#fff',
@@ -499,7 +516,59 @@ function Header({ darkMode, setDarkMode }) {
                             }}
                         >
                             {darkMode ? <FaSun /> : <FaMoon />}
+                        </IconButton> */}
+
+
+
+                        <IconButton
+                            onClick={() => setDarkMode(!darkMode)}
+                            sx={{
+                                color: '#fff',
+                                ml: '100px',
+                                display: { xs: 'none', md: 'flex' },
+                                backgroundColor: '#182C61',
+                                borderRadius: '50%',
+                                p: 1,
+                                position: 'relative',
+                                zIndex: 1,
+                                overflow: 'visible',
+
+                                '&::before': {
+                                    content: '""',
+                                    position: 'absolute',
+                                    top: '50%',
+                                    left: '50%',
+                                    width: '80%',
+                                    height: '80%',
+                                    border: `2px solid ${darkMode ? '#fff' : '#fff'
+                                        }`,
+                                    borderRadius: '50%',
+                                    transform: 'translate(-50%, -50%) scale(1)',
+                                    opacity: 0,
+                                    animation: 'ringPulse 2s infinite ease-out',
+                                    zIndex: -1,
+                                },
+
+                                '&:hover': {
+                                    backgroundColor: '#7b61a0',
+                                },
+
+                                '@keyframes ringPulse': {
+                                    '0%': {
+                                        transform: 'translate(-50%, -50%) scale(1)',
+                                        opacity: 0.6,
+                                    },
+                                    '100%': {
+                                        transform: 'translate(-50%, -50%) scale(2.2)',
+                                        opacity: 0,
+                                    },
+                                },
+                            }}
+                        >
+                            {darkMode ? <FaSun /> : <FaMoon />}
                         </IconButton>
+
+
 
 
 

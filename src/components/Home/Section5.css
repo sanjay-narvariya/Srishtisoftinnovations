@@ -1,0 +1,34 @@
+/************************************/
+
+.about-sec2 {
+  margin: 0.5rem;
+  width: 55%;
+}
+
+.item {
+  background-color: #fff;
+  padding: 20px;
+  width: 270px;
+  display:'flex';
+}
+
+.item:hover {
+  transform: rotate(0deg) !important;
+}
+
+
+/****************************/
+@media (max-width: 768px) {
+  .item {
+    transform: none !important;
+  }
+}
+/**************************/
+
+
+
+ .sec2 {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
