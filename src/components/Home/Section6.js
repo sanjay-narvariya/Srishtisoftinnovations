@@ -139,7 +139,7 @@ export default function Section6() {
                               
                                 position: window.innerWidth >= 600 ? 'absolute' : 'absolute',
                                 top: window.innerWidth >= 600 ? 23 : 20,
-                                left: window.innerWidth >= 600 ? -25 : -20,
+                                left: window.innerWidth >= 600 ? -25 : -16,
                                 marginLeft: window.innerWidth < 600 ? '4px' : '0px',
                                 lineHeight: 1,
                             }}
@@ -156,7 +156,7 @@ export default function Section6() {
                               
                                 position: window.innerWidth >= 600 ? 'absolute' : 'absolute',
                                 top: window.innerWidth >= 600 ? 20 : 20,
-                                left: window.innerWidth >= 600 ? 40 : 32,
+                                left: window.innerWidth >= 600 ? 40 : 25,
                                 marginLeft: window.innerWidth < 600 ? '4px' : '0px',
                                 lineHeight: 1,
                             }}
