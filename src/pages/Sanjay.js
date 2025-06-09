@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./AboutUs.css";
+import "./Sanjay.css";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import { Box, Modal, TextField, Button, IconButton, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-import Section1 from "../../components/About/Section1";
-import Section2 from "../../components/About/Section2";
-import Section3 from "../../components/About/Section3";
-import Section4 from "../../components/About/Section4";
+import Section1 from "../components/About/Section1";
+import Section2 from "../components/About/Section2";
+import Section3 from "../components/About/Section3";
+import Section4 from "../components/About/Section4";
 
-export default function About() {
+export default function Sanjay() {
 
     // Inside your component
     const theme = useTheme();

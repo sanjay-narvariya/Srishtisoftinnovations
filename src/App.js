@@ -10,7 +10,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Header from "./components/Topbar/Header";
 import Footer from "./components/Footer/Footer.js";
 import Home from "./pages/Home/Home.js";
-import Aboutus from "./pages/AboutUs/About.js";
+import Sanjay from "./pages/Sanjay.js";
 import './App.css';
 
 
@@ -32,7 +32,7 @@ function App() {
         <Routes>
          
           <Route path="/" element={<Home />} darkMode={darkMode} setDarkMode={setDarkMode} />
-           <Route path="/about" element={<Aboutus />} darkMode={darkMode} setDarkMode={setDarkMode} />
+           <Route path="/about" element={<Sanjay />} darkMode={darkMode} setDarkMode={setDarkMode} />
           {/* <Route path="/contact" element={<Contact />} /> */}
           {/* <Route path="/blog" element={<Blog />} /> */}
           {/* <Route path="/testimonials" element={<Testimonials />} /> */}
