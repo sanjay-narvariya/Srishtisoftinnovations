@@ -12,7 +12,7 @@ import Section2 from "../../components/About/Section2";
 import Section3 from "../../components/About/Section3";
 import Section4 from "../../components/About/Section4";
 
-export default function AboutUs() {
+export default function About() {
 
     // Inside your component
     const theme = useTheme();
