@@ -1,0 +1,98 @@
+/* Equipment Main Container */
+.RentalEquipment2 {
+  margin-top: 11rem;
+  background: transparent;
+  background-size: 100% 100%;
+  animation: gradientBG 30s ease infinite;
+  border-radius: 1rem;
+  width: 550px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .RentalEquipment2 {
+    width: 100%;
+    margin-top: 5rem;
+    margin-left: 0px;
+  }
+}
+
+
+/* Title Section */
+.equipment-title2 {
+  text-align: start;
+  padding-left: 2rem;
+  margin-left: 30px; /* Default for xs/sm screens */
+}
+
+/* Medium screens and above (like md = 768px or 900px depending on your framework) */
+@media (min-width: 768px) {
+  .equipment-title2 {
+    margin-left: 30px;
+    font-size: small;
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .equipment-title2 {
+    padding-left: 0.5rem; /* Less padding for small screens */
+    text-align: start;  /* Optional: adjust alignment */
+    font-size: small;
+  }
+}
+
+
+/************************************************************************/
+
+.equipment-title2 h3 {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.equipment-title2 h1 {
+  font-weight: 500;
+  font-size: 50px;
+  font-family: system-ui;
+}
+
+.equipment-title2 p {
+  letter-spacing: 1px;
+  width: 50%;
+  margin: auto;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .equipment-title2 h1 {
+    font-size: 36px;
+    text-align: start;
+  }
+
+  .equipment-title2 h3 {
+    font-size: 18px;
+    text-align: start;
+  }
+
+  .equipment-title2 p {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .equipment-title2 h1 {
+    font-size: 28px;
+  }
+
+  .equipment-title2 h3 {
+    font-size: 16px;
+  }
+
+  .equipment-title2 p {
+    width: 100%;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,169 @@
+/* ============== Dark Mode Button ================ */
+.darkmode_float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 30px; /* below WhatsApp button (which is at 90px) */
+  right: 40px;
+  bottom: 250px; /* Increased from 30px to 150px to push it higher */
+  background-color: #9370DB; /* You can use a different color like purple */
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 25px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.darkmode_float::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: #7b68ee; /* slightly darker purple */
+  border-radius: 50%;
+  animation: pulse-border 1.5s ease-out infinite;
+}
+
+
+/* Common ring base */
+.ring-sun::before,
+.ring-moon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0.6;
+  z-index: -1;
+  animation: ringPulse 2s infinite ease-out;
+  border: 2px solid transparent;
+}
+
+/* Specific colors */
+.ring-sun::before {
+  border-color: hsl(250, 37%, 97%); /* Yellow glow */
+}
+
+.ring-moon::before {
+  border-color: #1c056d; /* Purple glow */
+}
+
+/* Animation keyframes */
+@keyframes ringPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.2);
+    opacity: 0;
+  }
+}
+
+/***********************************/
+.phone-button {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    padding: 8px 16px;
+    background: #182C61;
+    white-space: nowrap;
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.phone-button:hover {
+    background-color: #7b61a0; /* Slightly darker on hover */
+    transform: scale(1.05);
+}
+
+/* ============== Whatsapp ================ */
+.whatsapp_float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 90px;
+  right: 40px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  line-height: 50px;
+}
+
+.whatsapp_float::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: #25d366;
+  border-radius: 50%;
+  animation: pulse-border 1.5s ease-out infinite;
+}
+
+.whatsapp-icon {
+  margin-bottom: 6px;
+}
+
+/* ============== Call Button =============== */
+.call_float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 170px;
+  right: 40px;
+  background-color: #0067b0;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 25px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call_float::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: #0067b0;
+  border-radius: 50%;
+  animation: pulse-border 1.5s ease-out infinite;
+}
+
+/* ============== Pulse Animation ============== */
+@keyframes pulse-border {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
+}

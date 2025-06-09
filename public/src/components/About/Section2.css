@@ -1,0 +1,45 @@
+/* Equipment Main Container */
+.RentalEquipment3 {
+  margin-top: 12rem;
+  background: transparent;
+  background-size: 100% 100%;
+  animation: gradientBG 30s ease infinite;
+  border-radius: 1rem;
+  width: 550px;
+}
+
+
+/* Title Section */
+.equipment-title3 {
+  text-align: start;
+  padding-left: 2rem;
+  margin-left: 30px; /* Default for xs/sm screens */
+}
+
+/* Medium screens and above (like md = 768px or 900px depending on your framework) */
+@media (min-width: 768px) {
+  .equipment-title3 {
+    margin-left: 90px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .equipment-title3 {
+    padding-left: 1rem; /* Less padding for small screens */
+    text-align: start;  /* Optional: adjust alignment */
+  }
+}
+
+
+
+.equipment-title3 h3 {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.equipment-title3 p {
+  letter-spacing: 1px;
+  width: 50%;
+  margin: auto;
+}
