@@ -10,7 +10,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Header from "./components/Topbar/Header";
 import Footer from "./components/Footer/Footer.js";
 import Home from "./pages/Home/Home.js";
-import Aboutus from "./pages/AboutUs/AboutUs.js";
+import Aboutus from "./pages/AboutUs/About.js";
 import './App.css';
 
 
