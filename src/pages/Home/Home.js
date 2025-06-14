@@ -137,13 +137,13 @@ export default function Home() {
     return (
         <div>
             <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2} style={{ position: 'relative', margin: '50px' }} sx={{ position: 'relative', m: { xs: 2, sm: 4, md: 6 } }}>
+                <Grid container spacing={2} sx={{ position: 'relative', m: { xs: 2, sm: 4, md: 6 }, p: { xs: 8, sm: 8, md: 8} }}>
                     <img src="/images/star.png" alt="star" style={{
                         width: isMobile ? '100px' : '140px',
                         height: isMobile ? '75px' : '120px',
                         display: 'block',
                         maxWidth: '100%',
-                        height: 'auto'
+                        height: 'auto',
                     }} />
                     <Box
                         sx={{

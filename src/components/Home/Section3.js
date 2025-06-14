@@ -1,14 +1,200 @@
+
 import React, { useEffect, useState } from "react";
 import "./Section2.css";
 import { Link, useNavigate } from "react-router-dom";
 import Paper from '@mui/material/Paper';
 import { Grid } from "@mui/material";
 import { Box, Modal, TextField, Button, IconButton, Typography, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 
 
-export default function Section2() {
+export default function Section3() {
 
+    // Inside your component
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+
+
+    const targetNumber = 1500;
+    const targetNumber1 = 428;
+    const targetNumber2 = 207;
+    const [count, setCount] = useState(0);
+    const [count1, setCount1] = useState(0);
+    const [count2, setCount2] = useState(0);
+    const [isCounting, setIsCounting] = useState(true);
+    const [hasScrolled, setHasScrolled] = useState(false);
+
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!hasScrolled) {
+                setHasScrolled(true);  // ✅ Sirf pehli scroll pe trigger karo
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [hasScrolled]);
+
+/**************************************************************************************** */
+
+    useEffect(() => {
+
+         if (hasScrolled) {
+        const interval = setInterval(() => {
+            setCount((prev) => {
+                if (prev < targetNumber) return prev + 10;
+                clearInterval(interval);
+                setIsCounting(false);
+                return targetNumber;
+            });
+        }, 10);
+ 
+        return () => clearInterval(interval);
+    }
+    }, [hasScrolled]);
+
+    /********************** */
+    useEffect(() => {
+
+         if (hasScrolled) {
+        const interval = setInterval(() => {
+            setCount1((prev) => {
+                if (prev < targetNumber1) return prev + 5;
+                clearInterval(interval);
+                setIsCounting(false);
+                return targetNumber1;
+            });
+        }, 10);
+    
+        return () => clearInterval(interval);
+    }
+    }, [hasScrolled]);
+
+    /*********************************** */
+
+    useEffect(() => {
+
+         if (hasScrolled) {
+        const interval = setInterval(() => {
+            setCount2((prev) => {
+                if (prev < targetNumber2) return prev + 5;
+                clearInterval(interval);
+                setIsCounting(false);
+                return targetNumber2;
+            });
+        }, 10);
+    
+        return () => clearInterval(interval);
+    }
+    }, [hasScrolled]);
+
+    /********************************* */
+
+
+    const fixedSizes = [72, 80, 60, 60]; // fallback sizes for digits (used if available)
+    const fixedSizes1 = [92, 60, 50, 60]; // fallback sizes for digits (used if available)
+    const fixedSizes2 = [72, 60, 90, 60]; // fallback sizes for digits (used if available)
+
+    /********************************************** */
+
+    const getStyledDigits = () => {
+        const digits = String(count).split(""); // ✅ no padStart
+
+        return digits.map((digit, index) => {
+            const fontSize = isCounting
+                ? Math.floor(Math.random() * 30) + 50
+                : fixedSizes[index] || 60; // fallback if more than 4 digits
+
+            const offset = isCounting ? Math.floor(Math.random() * 20) - 10 : 0;
+
+            return (
+                <Typography
+                    key={index}
+                    component="span"
+                    sx={{
+                        fontSize: `${fontSize}px`,
+                        position: "relative",
+                        top: `${offset}px`,
+                        fontWeight: "bold",
+                        color: "#D5A550",
+                        transition: "all 0.3s ease-in-out",
+                        mb: '20px',
+                    }}
+                >
+                    {digit}
+                </Typography>
+            );
+        });
+    };
+    /************************************************************************************************* */
+
+    const getStyledDigits1 = () => {
+        const digits = String(count1).split(""); // ✅ no padStart
+
+        return digits.map((digit, index) => {
+            const fontSize = isCounting
+                ? Math.floor(Math.random() * 30) + 50
+                : fixedSizes1[index] || 60; // fallback if more than 4 digits
+
+            const offset = isCounting ? Math.floor(Math.random() * 20) - 10 : 0;
+
+            return (
+                <Typography
+                    key={index}
+                    component="span"
+                    sx={{
+                        fontSize: `${fontSize}px`,
+                        position: "relative",
+                        top: `${offset}px`,
+                        fontWeight: "bold",
+                        color: "green",
+                        transition: "all 0.3s ease-in-out",
+                        mb: '20px',
+                    }}
+                >
+                    {digit}
+                </Typography>
+            );
+        });
+    };
+    /********************************************** */
+
+    const getStyledDigits2 = () => {
+        const digits = String(count2).split(""); // ✅ no padStart
+
+        return digits.map((digit, index) => {
+            const fontSize = isCounting
+                ? Math.floor(Math.random() * 30) + 50
+                : fixedSizes2[index] || 60; // fallback if more than 4 digits
+
+            const offset = isCounting ? Math.floor(Math.random() * 20) - 10 : 0;
+
+            return (
+                <Typography
+                    key={index}
+                    component="span"
+                    sx={{
+                        fontSize: `${fontSize}px`,
+                        position: "relative",
+                        top: `${offset}px`,
+                        fontWeight: "bold",
+                        color: "pink",
+                        transition: "all 0.3s ease-in-out",
+                        mb: '20px',
+                    }}
+                >
+                    {digit}
+                </Typography>
+            );
+        });
+    };
+
+    /*************************************************Stop ************************************************* */
     return (<>
         {/* Stats */}
         <Box
@@ -18,7 +204,8 @@ export default function Section2() {
                 alignItems: { xs: "center", sm: "flex-start" },
                 justifyContent: { sm: "space-around" },
                 mt: 0,
-                ml:5,
+                ml: isMobile ? 5 : 8,
+                mb: 10,
                 gap: 2,
             }}
         >
@@ -35,55 +222,16 @@ export default function Section2() {
                         display: 'flex',
                         alignItems: 'center',
                         position: { xs: 'relative', sm: 'relative' },
-                         ml: { xs: '10px', sm: '50px' },
+                        ml: { xs: '10px', sm: '50px' },
                     }}
                 >
-                    {/* "3" Part */}
-                     <span
-                        style={{
-                            fontSize: window.innerWidth >= 600 ? 'clamp(20px, 10vw, 190px)':'clamp(20px, 10vw, 200px)',
-                            fontWeight: 'bold',
-                            color:'pink',
-                            position: window.innerWidth >= 600 ? 'absolute' : 'absolute',
-                            top: window.innerWidth >= 600 ? 55 : 20,
-                            left: window.innerWidth >= 600 ? -60 : -20,
-                            marginLeft: window.innerWidth < 600 ? '4px' : '0px',
-                            lineHeight: 1,
-                        }}
-                    >
-                        1
-                    </span>
-                    <span
-                        style={{
-                            fontSize: 'clamp(40px, 16vw, 160px)',
-                            fontWeight: 500,
-                            color:'pink',
-                        }}
-                    >
-                        5
-                    </span>
-
-                    {/* "000+" Part */}
-                    <span
-                        style={{
-                            fontSize: window.innerWidth >= 600 ? 'clamp(20px, 10vw, 190px)':'clamp(20px, 10vw, 200px)',
-                            fontWeight: 'bold',
-                            color:'pink',
-                            position: window.innerWidth >= 600 ? 'absolute' : 'absolute',
-                            top: window.innerWidth >= 600 ? 45 : 20,
-                            left: window.innerWidth >= 600 ? 90 : 32,
-                            marginLeft: window.innerWidth < 600 ? '4px' : '0px',
-                            lineHeight: 1,
-                        }}
-                    >
-                        00
-                    </span>
+                    {getStyledDigits()}
                 </Box>
 
                 {/* Label */}
                 <div
                     style={{
-                        marginTop:window.innerWidth <600 ? '-10px':'-40px',
+                        marginTop: window.innerWidth < 600 ? '-10px' : '-40px',
                         fontSize: 'clamp(14px, 3vw, 26px)',
                         textAlign: 'left',
                         width: window.innerWidth < 600 ? '100%' : '550px',
@@ -95,12 +243,12 @@ export default function Section2() {
 
 
 
-           <Box
+            <Box
                 sx={{
                     position: "relative",
                     display: "inline-block",
                     ml: { xs: 10, sm: 80 },
-                     mr: { xs: -10, sm: 0 },
+                    mr: { xs: -10, sm: 0 },
                 }}
             >
                 {/* Wrapper for mobile alignment */}
@@ -109,56 +257,16 @@ export default function Section2() {
                         display: 'flex',
                         alignItems: 'center',
                         position: { xs: 'relative', sm: 'relative' },
-                         ml: { xs: '10px', sm: '50px' },
+                        ml: { xs: '10px', sm: '50px' },
                     }}
                 >
-                    {/* "3" Part */}
-                    <span
-                        style={{
-                            fontSize: 'clamp(40px, 16vw, 160px)',
-                            fontWeight: 500,
-                            color:'green',
-                        }}
-                    >
-                        4
-                    </span>
-
-                     <span
-                        style={{
-                            fontSize: window.innerWidth >= 600 ? 'clamp(20px, 10vw, 200px)':'clamp(20px, 13vw, 200px)',
-                            fontWeight: 'bold',
-                            color:'green',
-                            position: window.innerWidth >= 600 ? 'absolute' : 'absolute',
-                            top: window.innerWidth >= 600 ? 30 : 15,
-                            left: window.innerWidth >= 600 ? 90 : -20,
-                            marginLeft: window.innerWidth < 600 ? '55px' : '0px',
-                            lineHeight: 1,
-                        }}
-                    >
-                        2
-                    </span>
-
-                    {/* "000+" Part */}
-                    <span
-                        style={{
-                            fontSize: window.innerWidth >= 600 ? 'clamp(20px, 10vw, 190px)':'clamp(20px, 12vw, 200px)',
-                            fontWeight: 'bold',
-                            color:'green',
-                            position: window.innerWidth >= 600 ? 'absolute' : 'absolute',
-                            top: window.innerWidth >= 600 ? 20 : 11,
-                            left: window.innerWidth >= 600 ? 165 : 38,
-                            marginLeft: window.innerWidth < 600 ? '25px' : '0px',
-                            lineHeight: 1,
-                        }}
-                    >
-                        8
-                    </span>
+                    {getStyledDigits1()}
                 </Box>
 
                 {/* Label */}
                 <div
                     style={{
-                        marginTop:window.innerWidth <600 ? '-10px':'-40px',
+                        marginTop: window.innerWidth < 600 ? '-10px' : '-40px',
                         fontSize: 'clamp(14px, 3vw, 26px)',
                         textAlign: 'left',
                         width: window.innerWidth < 600 ? '70%' : '550px',
@@ -168,8 +276,8 @@ export default function Section2() {
                 </div>
             </Box>
 
-             
-              <Box
+
+            <Box
                 sx={{
                     position: "relative",
                     display: "inline-block",
@@ -182,40 +290,17 @@ export default function Section2() {
                         display: 'flex',
                         alignItems: 'center',
                         position: { xs: 'relative', sm: 'relative' },
-                         ml: { xs: '36px', sm: '150px' },
+                        ml: { xs: '30px', sm: '75px' },
                     }}
                 >
-                    {/* "3" Part */}
-                     <span
-                        style={{
-                            fontSize: window.innerWidth >= 600 ? 'clamp(20px, 10vw, 190px)':'clamp(20px, 10vw, 200px)',
-                            fontWeight: 'bold',
-                            color:'#6c5ce7',
-                            position: window.innerWidth >= 600 ? 'absolute' : 'absolute',
-                            top: window.innerWidth >= 600 ? 90 : 42,
-                            left: window.innerWidth >= 600 ? -140 : -35,
-                            marginLeft: window.innerWidth < 600 ? '4px' : '0px',
-                            lineHeight: 1,
-                        }}
-                    >
-                        20
-                    </span>
-                    <span
-                        style={{
-                            fontSize: 'clamp(40px, 20vw, 200px)',
-                            fontWeight: 500,
-                            color:'#6c5ce7',
-                        }}
-                    >
-                        7
-                    </span>
+                    {getStyledDigits2()}
 
                 </Box>
 
                 {/* Label */}
                 <div
                     style={{
-                        marginTop:window.innerWidth <600 ? '-10px':'-40px',
+                        marginTop: window.innerWidth < 600 ? '-10px' : '-40px',
                         fontSize: 'clamp(14px, 3vw, 26px)',
                         textAlign: 'left',
                         width: window.innerWidth < 600 ? '90%' : '550px',
@@ -231,7 +316,7 @@ export default function Section2() {
         </Box>
 
 
-        
+
 
     </>)
 };

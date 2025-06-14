@@ -5,12 +5,20 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Header from "./components/Topbar/Header";
 import Footer from "./components/Footer/Footer.js";
 import Home from "./pages/Home/Home.js";
-import Sanjay from "./pages/Sanjay.js";
+import Inform from "./pages/Info/Inform.js";
+import Test from "./pages/Testimonial/Test.js";
+import Contact from "./pages/Contactus/Contact.js";
+import ThankYou from "./components/ThankYou/ThankYou.js";
+
 import './App.css';
 
 
@@ -32,10 +40,11 @@ function App() {
         <Routes>
          
           <Route path="/" element={<Home />} darkMode={darkMode} setDarkMode={setDarkMode} />
-           <Route path="/about" element={<Sanjay />} darkMode={darkMode} setDarkMode={setDarkMode} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
+           <Route path="/about" element={<Inform />} darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Route path="/contact" element={<Contact />} darkMode={darkMode} setDarkMode={setDarkMode}/>
           {/* <Route path="/blog" element={<Blog />} /> */}
-          {/* <Route path="/testimonials" element={<Testimonials />} /> */}
+         <Route path="/testimonials" element={<Test />} darkMode={darkMode} setDarkMode={setDarkMode} />
+         <Route path="/thankyou" element={<ThankYou />} darkMode={darkMode} setDarkMode={setDarkMode} />
           {/* <Route path="/services/web-development" element={<Services />} /> */}
           {/* <Route path="/services/mobile-apps" element={<Services />} /> */}
           {/* <Route path="/services/seo" element={<Services />} /> */}
