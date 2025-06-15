@@ -45,7 +45,7 @@ export default function Section1() {
         <Box sx={{ flexGrow: 1, p: isMobile ? 3 : 8, }}>
             <Grid container spacing={2} alignItems="center" justifyContent="space-between" >
                 {/* LEFT: CONTACT INFO */}
-                <Grid item xs={12} md={5} sx={{ ml: isMobile ? '-10px' : '-40px' }}>
+                <Grid item xs={12} md={5} sx={{ ml: isMobile ? '-20px' : '-40px' }}>
                     <Box sx={{ px: isMobile ? 1 : 0, width: isMobile ? 'auto' : '80%' }}>
                         <Typography variant="h5" fontWeight="bold" gutterBottom sx={{ fontSize: '30px' }}>
                             SrishtiSoft Innovations
@@ -96,8 +96,8 @@ export default function Section1() {
                 </Grid>
 
                 {/* RIGHT: EMBEDDED MAP */}
-                <Grid item xs={12} md={7} sx={{ background: 'red', width: isMobile ? '320px' : '650px', ml: isMobile ? '4px' : '-40px' }}>
-                    <Box sx={{ borderRadius: 15, boxShadow: 3 }}>
+                <Grid item xs={12} md={7} sx={{ background: 'red', width: isMobile ? '320px' : '680px', ml: isMobile ? '-5px' : '-40px', mr: isMobile ? '10px' : '0px' }}>
+                    <Box sx={{ borderRadius: 1, boxShadow: 3,  }}>
                         <iframe
                             title="Near By Dr. Surendra Singh Narvariya Homeopathic Clinic"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14126.32872881328!2d77.50072717996155!3d27.22932541781257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3973a3c007361d59%3A0xf157b12fcef2a17d!2sDr%20Surendra%20Singh%20Narvariya%20Homeopathic%20Clinic!5e0!3m2!1sen!2sin!4v1718364222000!5m2!1sen!2sin"

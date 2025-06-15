@@ -116,17 +116,18 @@ export default function Contact() {
                 </Grid>
 
                 {/* Right Side Form */}
-                <Grid item xs={12} md={6} sx={{ width: isMobile ? '350px' : '500px', height: isMobile ? 'auto' : '600px', mt: '10px', mb: isMobile ? '80px' : '150px' }} >
+                <Grid item xs={12} md={6} sx={{ width: isMobile ? '300px' : '500px', height: isMobile ? 'auto' : '600px', mt: '10px', mb: isMobile ? '80px' : '150px' }} >
                     <Box
                         sx={{
                             border: '1px solid black',
                             borderRadius: '4px',
                             padding: '24px',
                             boxShadow: '5px 5px 0 black',
-                            width: isMobile ? '350px' : '100%',
+                            width: isMobile ? '300px' : '100%',
                             height: isMobile ? 'auto' : '90%',
-                            ml: isMobile ? '0px' : '70px',
+                            ml: isMobile ? '2px' : '70px',
                             mt: isMobile ? '10px' : '160px',
+                            mr: isMobile ? '2px' : '0px',
 
                         }}
                     >
@@ -180,7 +181,7 @@ export default function Contact() {
                                             onChange={handleChange}
                                             placeholder="Write your message"
                                             sx={{
-                                                width: isMobile ? '67%' : '100%',
+                                                width: isMobile ? '56%' : '100%',
                                                 padding: '10px',
                                                 border: '1px solid #ccc',
                                                 borderRadius: 1,
@@ -192,7 +193,7 @@ export default function Contact() {
                                         />
                                     </Grid>
 
-                                    <Grid item xs={12} sm={12} md={12} sx={{ mt: '1px', width: isMobile ? '300px' : '450px' }}>
+                                    <Grid item xs={12} sm={12} md={12} sx={{ mt: '1px', width: isMobile ? '260px' : '450px' }}>
                                         <Button
                                             fullWidth
                                             variant="contained"
