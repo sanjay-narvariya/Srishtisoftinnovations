@@ -1,8 +1,57 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, Typography, useMediaQuery } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { useTheme, keyframes, styled } from '@mui/material/styles';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+
+
+
+
+
+// Keyframe for scaling the icon
+const scaleAnimation = keyframes`
+  0%, 100% {
+    transform: scale(0.1);
+  }
+  50% {
+    transform: scale(1.8);
+  }
+`;
+
+// Keyframe for glowing ring
+const glowAnimation = keyframes`
+  0% {
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(46, 204, 113, 1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.1);
+  }
+`;
+
+// Styled Box with glow animation
+const AnimatedBox = styled(Box)(({ theme }) => ({
+  borderRadius: '50%',
+  backgroundColor: '#2ecc71',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  animation: `${glowAnimation} 2s infinite`,
+}));
+
+// Styled Icon with scale animation
+const AnimatedIcon = styled(CheckCircleIcon)(({ theme }) => ({
+  color: '#fff',
+  animation: `${scaleAnimation} 2s infinite`,
+  transition: 'transform 0.3s ease-in-out',
+}));
+
+
+
+
 
 export default function ThankYou() {
     const navigate = useNavigate();
@@ -10,7 +59,17 @@ export default function ThankYou() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
+
+
+
     useEffect(() => {
+        const container = document.getElementById('scrollContainer');
+        if (container) {
+            container.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        } else {
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        }
+
         const countdown = setInterval(() => {
             setSeconds((prev) => prev - 1);
         }, 1000);
@@ -25,21 +84,24 @@ export default function ThankYou() {
         };
     }, [navigate]);
 
+
+
+
     return (
         <Box
             sx={{
-                minHeight: '100vh',
+                width: '100%',
+                height: '100vh',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
                 textAlign: 'center',
-                backgroundColor: '#fff',
+                backgroundColor: 'transparent',
                 px: 2,
             }}
         >
-            {/* Green Tick Icon */}
-            <Box
+            <AnimatedBox
                 sx={{
                     width: isMobile ? 80 : 100,
                     height: isMobile ? 80 : 100,
@@ -52,19 +114,13 @@ export default function ThankYou() {
                     mb: isMobile ? 2 : 3,
                 }}
             >
-                <CheckCircleIcon sx={{ fontSize: isMobile ? 40 : 60, color: '#fff' }} />
-            </Box>
+                <AnimatedIcon sx={{ fontSize: isMobile ? 40 : 60, color: '#fff' }} />
+            </AnimatedBox>
 
-            {/* Thank You Heading */}
-            <Typography
-                variant={isMobile ? 'h5' : 'h4'}
-                fontWeight="bold"
-                sx={{ mb: isMobile ? 1 : 2 }}
-            >
+            <Typography variant={isMobile ? 'h5' : 'h4'} fontWeight="bold" sx={{ mb: isMobile ? 1 : 2 }}>
                 Thank You
             </Typography>
 
-            {/* Description */}
             <Typography
                 variant="body1"
                 sx={{
@@ -77,8 +133,7 @@ export default function ThankYou() {
                 Thank you for your interest. It has been submitted successfully. We will be in touch shortly.
             </Typography>
 
-            {/* Countdown Message */}
-            <Typography variant="body2" color="text.secondary" fontSize={isMobile ? '13px' : '14px'}>
+            <Typography variant="body2" color="text.primary" fontSize={isMobile ? '13px' : '14px'}>
                 You will be redirected to home page in {seconds} second{seconds !== 1 && 's'}.
             </Typography>
         </Box>

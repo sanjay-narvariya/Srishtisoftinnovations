@@ -54,7 +54,7 @@ export default function Section1() {
                         <Box display="flex" alignItems="flex-start" mb={2}>
                             <RoomIcon sx={{ mr: 1, mt: 0.5 }} />
                             <Typography variant="body1" sx={{ fontSize: '22px' }}>
-                                1rd floor, Near Dr Surendra Singh Narvariya, <br />
+                                1st floor, Near Dr Surendra Singh Narvariya, <br />
                                 Suraj Mal Nagar, Bharatpur,<br />
                                 Bharatpur<br />
                                 Rajasthan 321001

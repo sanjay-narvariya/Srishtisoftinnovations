@@ -91,7 +91,7 @@ export default function Section2() {
 
 
                 <section>
-                    <div className="equipment-title" style={{ textAlign: 'center', padding: '1rem' }}>
+                    <div className="equipment-title1" style={{ textAlign: 'center', padding: '1rem', marginRight:'40px' }}>
                         <h1 className="h3 fw-light">
                             <strong style={{ fontWeight: 'bold' }}>OUR </strong>
                             <strong style={{ color: '#2729d0' }}>CERTI</strong>
