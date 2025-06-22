@@ -74,7 +74,7 @@ const Section1 = () => {
                 {/* Testimonial text */}
                 <Typography
                     variant="h6"
-                    sx={{ fontWeight: 600, fontSize: isMobile ? '16px' : '20px' }}
+                    sx={{ fontWeight: 600, fontSize: isMobile ? '16px' : '20px',color:'#00a8ff' }}
                 >
                     Exceptional quality and professionalism. — I'm thoroughly impressed!
                 </Typography>

@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Section1 from '../../components/Contacts/Section1.js';
 
-export default function Contact() {
+export default function Contact () {
 
     const [formData, setFormData] = useState({
         firstName: '',
