@@ -315,6 +315,7 @@ export default function Section1() {
                     sx={{
                         display: 'inline-flex',
                         alignItems: 'center',
+                        ml:isMobile?'-10px':'0px',
                         mb: 4,
                         gap: 0.5,
                         flexWrap: 'wrap',
@@ -335,8 +336,8 @@ export default function Section1() {
                                 onClick={() => setActivePage(pageNum)}
                                 variant={activePage === pageNum ? 'contained' : 'outlined'}
                                 sx={{
-                                    minWidth:isMobile?'10px': '36px',
-                                    px: isMobile?1:2,
+                                    minWidth:isMobile?'8px': '36px',
+                                    px: isMobile?0.8:2,
                                     backgroundColor: activePage === pageNum ? '#1976d2' : 'transparent',
                                     color: activePage === pageNum ? '#fff' : '#000',
                                     borderColor: '#ccc',
