@@ -122,37 +122,37 @@ const Footer = () => {
                     <h3>Courses</h3>
                     <ul>
                       <li className="footer-page-link">
-                        <Link to="/language1">C-Language</Link>
+                        <Link to="">C-Language</Link>
                       </li>
                       <li className="footer-page-link">
-                        <Link to="/language2">C++ Language</Link>
+                        <Link to="">C++ Language</Link>
                       </li>
                       <li className="footer-page-link">
-                        <Link to="/nodejs">Node-JS</Link>
+                        <Link to="">Node-JS</Link>
                       </li>
                       <li className="footer-page-link">
-                        <Link to="/reactjs">React-JS</Link>
+                        <Link to="">React-JS</Link>
                       </li>
                       <li className="footer-page-link">
-                        <Link to="/expressjs">Express-JS</Link>
+                        <Link to="">Express-JS</Link>
                       </li>
                       <li className="footer-page-link">
-                        <Link to="/javascript">Java-Script</Link>
+                        <Link to="">Java-Script</Link>
                       </li>
                       <li className="footer-page-link">
-                        <Link to="/mongodb">Mongo-DB</Link>
+                        <Link to="">Mongo-DB</Link>
                       </li>
                       <li className="footer-page-link">
-                        <Link to="/mysql">MySql</Link>
+                        <Link to="">MySql</Link>
                       </li>
                       <li className="footer-page-link">
-                        <Link to="/seo">SEO Solution</Link>
+                        <Link to="">SEO Solution</Link>
                       </li>
                       <li className="footer-page-link">
-                        <Link to="/digital">Digital Marketing</Link>
+                        <Link to="">Digital Marketing</Link>
                       </li>
                       <li className="footer-page-link">
-                        <Link to="/googleservice">Google Services</Link>
+                        <Link to="">Google Services</Link>
                       </li>
                     </ul>
                   </div>
@@ -190,13 +190,13 @@ const Footer = () => {
                         <a href="https://gk-earth-mover1-emu8.vercel.app/home" target="_blank" >GkEarthMover-ADMIN</a>
                       </li>
                       <li className="footer-page-link">
-                        <a href="#" target="/">Quick-Ecommerce</a>
+                        <Link to="/services/live-project" >Quick-Ecommerce</Link>
                       </li>
                       <li className="footer-page-link">
-                        <a href="#" target="/">Supplier</a>
+                        <Link to="/services/live-project">Supplier</Link>
                       </li>
                       <li className="footer-page-link">
-                        <a href="#" target="#">Foodproject</a>
+                     <Link to="/services/live-project">Foodproject</Link>
                       </li>
                     </ul>
                   </div>

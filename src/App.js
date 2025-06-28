@@ -17,6 +17,7 @@ import ThankYou from "./components/ThankYou/ThankYou.js";
 import ScrollToTop from "./components/Scrolltotop/ScrollToTop.js";
 import Internship from "./pages/OurServices/Internship/Internship.js";
 import LiveProject from "./pages/OurServices/LiveProject/LiveProject.js";
+import Blog from "./pages/Blogs/Blog.js";
 
 import './App.css';
 
@@ -45,7 +46,7 @@ function App() {
           <Route path="/contact" element={<Contact />} darkMode={darkMode} setDarkMode={setDarkMode}/>
            <Route path="/services/internship" element={<Internship />} darkMode={darkMode} setDarkMode={setDarkMode}/>
             <Route path="/services/live-project" element={<LiveProject />} darkMode={darkMode} setDarkMode={setDarkMode}/>
-          {/* <Route path="/blog" element={<Blog />} /> */}
+          <Route path="/blog" element={<Blog />} darkMode={darkMode} setDarkMode={setDarkMode} />
          <Route path="/testimonials" element={<Test />} darkMode={darkMode} setDarkMode={setDarkMode} />
          <Route path="/thankyou" element={<ThankYou />} darkMode={darkMode} setDarkMode={setDarkMode} />
       </Routes>

@@ -47,7 +47,7 @@ export default function Section4() {
 
 
     return (
-        <Box sx={{ py: isMobile?5:10, backgroundColor: 'transparent', width: '100%' }}>
+        <Box sx={{ py: isMobile?2:5, backgroundColor: 'transparent', width: '100%' }}>
             <Container>
                 <Typography
                     variant="h4"
@@ -57,6 +57,21 @@ export default function Section4() {
                     Our Team
                 </Typography>
                 <Row className="justify-content-center">
+                        <div>
+                            <Avatar
+                                    alt="sanjay"
+                                    src="/sanjay.png"
+                                    sx={{
+                                        width: '100%',
+                                        maxWidth: 250,
+                                        height: 'auto',
+                                        margin: '0 auto',
+                                        borderRadius: 5,
+                                        objectFit: 'contain',
+                                    }}
+                                    variant="rounded"
+                                />
+                                </div>
                     {teamMembers.map((member, index) => (
                         <Col
                             key={index}
@@ -70,26 +85,14 @@ export default function Section4() {
                                 sx={{
                                     borderRadius: 4,
                                     background: 'transparent',
-                                    py: 3,
+                                    py: isMobile?0:3,
                                     px: 2,
                                     width: '100%',
                                     maxWidth: 300,
                                     textAlign: 'center',
                                 }}
                             >
-                                <Avatar
-                                    alt={member.name}
-                                    src={member.image}
-                                    sx={{
-                                        width: '100%',
-                                        maxWidth: 250,
-                                        height: 'auto',
-                                        margin: '0 auto',
-                                        borderRadius: 5,
-                                        objectFit: 'contain',
-                                    }}
-                                    variant="rounded"
-                                />
+                            
                                 <Typography variant="h6" className="fw-bold mt-3">
                                     {member.name}
                                 </Typography>

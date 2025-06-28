@@ -52,7 +52,7 @@ export default function Section3() {
                 setIsCounting(false);
                 return targetNumber;
             });
-        }, 10);
+        }, 300);
  
         return () => clearInterval(interval);
     }
@@ -69,7 +69,7 @@ export default function Section3() {
                 setIsCounting(false);
                 return targetNumber1;
             });
-        }, 10);
+        }, 400);
     
         return () => clearInterval(interval);
     }
@@ -87,7 +87,7 @@ export default function Section3() {
                 setIsCounting(false);
                 return targetNumber2;
             });
-        }, 10);
+        }, 400);
     
         return () => clearInterval(interval);
     }
