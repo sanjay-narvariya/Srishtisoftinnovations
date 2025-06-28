@@ -394,7 +394,7 @@ export default function Home() {
                             >
                                 {/* This text now appears at the top */}
                                 <Box sx={{ fontSize: '14px', fontWeight: 'bold', mb: 6 }}>
-                                    <strong style={{ color: '#45c21a', marginRight: 4 }}>1500+</strong>
+                                    <strong style={{ color: '#45c21a', marginRight: 4 }}>500+</strong>
                                     Successful Placement
                                 </Box>
 
