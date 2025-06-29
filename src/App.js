@@ -18,6 +18,7 @@ import ScrollToTop from "./components/Scrolltotop/ScrollToTop.js";
 import Internship from "./pages/OurServices/Internship/Internship.js";
 import LiveProject from "./pages/OurServices/LiveProject/LiveProject.js";
 import Blog from "./pages/Blogs/Blog.js";
+import Associate from "./pages/Associates/Associate.js";
 
 import './App.css';
 
@@ -42,13 +43,17 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} darkMode={darkMode} setDarkMode={setDarkMode} />
-           <Route path="/about" element={<Inform />} darkMode={darkMode} setDarkMode={setDarkMode} />
-          <Route path="/contact" element={<Contact />} darkMode={darkMode} setDarkMode={setDarkMode}/>
-           <Route path="/services/internship" element={<Internship />} darkMode={darkMode} setDarkMode={setDarkMode}/>
-            <Route path="/services/live-project" element={<LiveProject />} darkMode={darkMode} setDarkMode={setDarkMode}/>
-          <Route path="/blog" element={<Blog />} darkMode={darkMode} setDarkMode={setDarkMode} />
-         <Route path="/testimonials" element={<Test />} darkMode={darkMode} setDarkMode={setDarkMode} />
-         <Route path="/thankyou" element={<ThankYou />} darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Route path="/about" element={<Inform />} darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Route path="/contact" element={<Contact />} darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Route path="/services/internship" element={<Internship />} darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Route path="/services/live-project" element={<LiveProject />} darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Route path="/blog" element={<Blog />} darkMode={darkMode} setDarkMode={setDarkMode} />
+           <Route path="/associate" element={<Associate />} darkMode={darkMode} setDarkMode={setDarkMode} />
+          {/* aur bhi nested routes bana sakte ho */}
+      
+
+        <Route path="/testimonials" element={<Test />} darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Route path="/thankyou" element={<ThankYou />} darkMode={darkMode} setDarkMode={setDarkMode} />
       </Routes>
 
       {!hideLayout && <Footer darkMode={darkMode} setDarkMode={setDarkMode} />}

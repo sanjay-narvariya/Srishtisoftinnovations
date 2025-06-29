@@ -254,7 +254,7 @@ const Footer = () => {
               <p className="footer-links">
                 <Link to={`/about`}><b>About SrishtiSoft</b></Link>
                 <Link to={`/services/internship`}><b>Courses</b></Link>
-                <Link to={`/support`}><b>Associates</b></Link>
+                   <Link to={`/associate`}><b>Associates</b></Link> {/* ✅ fixed */}
               </p>
               <p className="footer-copy">
                 All Right Reserved &#169; {new Date().getFullYear()}{" "}

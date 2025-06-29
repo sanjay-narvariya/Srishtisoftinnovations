@@ -75,7 +75,7 @@ function Header({ darkMode, setDarkMode }) {
         else if (path.startsWith("/services")) setIsActive("Our Services");
         else if (path === "/testimonials") setIsActive("Testimonial");
         else if (path === "/contact") setIsActive("Contact Us");
-        else if (path === "/blog") setIsActive("Blog");
+        else if (path === "/blog" || path === "/associate") setIsActive("Blog");
     }, [location.pathname]);
 
 
