@@ -306,7 +306,7 @@ export default function Section2() {
                                                 position: window.innerWidth >= 600 ? 'absolute' : 'static',
                                                 top: window.innerWidth >= 600 ? 10 : 'auto',
                                                 left: window.innerWidth >= 600 ? 55 : 'auto',
-                                                marginLeft: window.innerWidth < 600 ? '4px' : '0',
+                                                marginLeft: window.innerWidth < 600 ? '-3px' : '0',
                                             }}
                                         >
                                             00+

@@ -20,7 +20,7 @@ export default function Section1() {
             const [categoryList, setCategoryList] = useState([]);
 
   
-             const photos=[[1,'Adarsh Saxena','Frontend Developer'],[2,'Pooja Gupta','Senior Software Developer'],[3,'CChaya Mohar','Software Developer'],[4,'Praduman Singh','SDE'],[5,'Shailendra Pal','Python(Backend)'],[6,'Aman Tiwari','Backend Developer'],[7,'Deepak Kumar','SalesForce'],[8,'Mukesh Singh','Frontend Developer'],[9,'Vishnu Shau','Senior Frontend Developer'],[10,'Suresh Prajapati', 'UI/UX'],[11,'Gaurav Kumar','Backend Developer']]
+             const photos=[[1,'Adarsh Saxena','Frontend Developer'],[2,'Pooja Gupta','Senior Software Developer'],[3,'Chhaya Mohar','Software Developer'],[4,'Pradumn Tripathi','SDE'],[5,'Shailendra Pal','Python(Backend)'],[6,'Aman Tiwari','Backend Developer'],[7,'Deepak Kumar','SalesForce'],[8,'Mukesh Singh','Frontend Developer'],[9,'Vishnu Shau','Senior Frontend Developer'],[10,'Suresh Prajapati', 'UI/UX'],[11,'Gaurav Kumar','Backend Developer']]
 
     useEffect(() => {
         const handleFocus = () => {

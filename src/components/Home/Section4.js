@@ -53,7 +53,7 @@ const Section4 = () => {
 
 
                 {/* Right Column */}
-                <Grid item xs={12} md={8} sx={{ width: isMobile ? 'auto' : '700px', marginLeft: isMobile ? '20px' : '100px', marginRight: isMobile ? '20px' : '' }}>
+                <Grid item xs={12} md={8} sx={{ mt:isMobile?'55px':'', width: isMobile ? 'auto' : '700px', marginLeft: isMobile ? '20px' : '100px', marginRight: isMobile ? '20px' : '' }}>
                     <Typography variant="h5" className="mb-2 text-center text-md-start" style={{ marginLeft: isMobile ? '' : '', width: isMobile ? 'auto' : 'auto', fontSize: isMobile ? 28 : 38, letterSpacing: isMobile ? '0.3rem' : '0.6rem', lineHeight: 1 }}>
                         <strong>CREATING A FUTURE 🌟 YOUR LOVE 💖</strong>
                     </Typography>

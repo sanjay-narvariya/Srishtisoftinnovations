@@ -19,7 +19,7 @@ export default function Section6() {
                 <Typography variant="h5" className="mb-2 text-center text-md-start" style={{ marginLeft: isMobile ? '' : '', width: isMobile ? 'auto' : '640px', fontSize: isMobile ? 28 : 38, letterSpacing: isMobile ? '0.3rem' : '0.4rem', lineHeight: 1 }}>
                     <strong> Trusted Partners & Clients: <span style={{ fontWeight: 900, letterSpacing: '5.5px', textShadow: '0px 0px 1px black', fontFamily: 'Arial Blue, Impact, sans-serif', marginLeft: isMobile ? '' : '20px' }}> A Diverse Portfolio. 🤝🌐</span></strong>
                 </Typography>
-                <Typography variant="body1" className="mt-3 opacity-75  fs-5 font-poppins" sx={{ marginLeft: isMobile ? 2 : 3, width: isMobile ? 250 : 580, height: isMobile ? 300 : 570, marginTop: '10px', }}>
+                <Typography variant="body1" className="mt-3 opacity-75  fs-5 font-poppins" sx={{ marginLeft: isMobile ? 2 : 3, width: isMobile ? 'auto' : 580, height: isMobile ? 300 : 570, marginTop: '10px', }}>
                     <div>Our commitment to fostering the future success of our students extends to the pinnacle of our comprehensive support system, where we proudly offer unparalleled placement assistance. At SRISHTISOFT we are committed to the unwavering dedication to providing an extraordinary platform for our students to not only excel academically but to seamlessly transition into the professional realm with utmost success.</div>
                     <div style={{ marginTop: '20px' }}>Our network of industry connections and partnerships with leading corporations further amplifies the effectiveness of our placement assistance, creating a bridge between academia and the dynamic demands of the professional landscape.</div>
                 </Typography>
@@ -30,7 +30,7 @@ export default function Section6() {
                         src="companylogo.png"
                         alt="company"
                         sx={{
-                           color:'Highlight', width: isMobile ? 250 : 550, height: isMobile ? 300 : 500, marginTop: isMobile?'620px':'-220px', marginLeft: isMobile ? '25px' : '-20px', filter: 'contrast(120%) brightness(100%)',
+                           color:'Highlight', width: isMobile ? 250 : 550, height: isMobile ? 300 : 500, marginTop: isMobile?'400px':'-220px', marginLeft: isMobile ? '25px' : '-20px', filter: 'contrast(120%) brightness(100%)',
 
                         }}
                     />
