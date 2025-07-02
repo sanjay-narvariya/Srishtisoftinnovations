@@ -128,7 +128,7 @@ const Section3 = () => {
                     borderRight: '30px solid transparent',
                     borderBottom: '30px solid #fff',
                     position: 'absolute',
-                    top: 'calc(100% - 223px)',
+                    top:isMobile?'calc(100% - 145px)': 'calc(100% - 223px)',
                     left: '10%',
                     transform: 'rotate(90deg)', // 👈 Rotate triangle
                     zIndex: 0,
@@ -145,7 +145,7 @@ const Section3 = () => {
                     borderRight: '30px solid transparent',
                     borderBottom: '30px solid #fff',
                     position: 'absolute',
-                    top: 'calc(100% - 223px)',
+                    top:isMobile?'calc(100% - 145px)': 'calc(100% - 223px)',
                     left: '10%',
                     transform: 'rotate(90deg)', // 👈 Rotate triangle
                     zIndex: 2,
