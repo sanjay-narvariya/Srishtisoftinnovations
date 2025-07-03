@@ -25,6 +25,7 @@ import Internship from "./pages/OurServices/Internship/Internship.js";
 import LiveProject from "./pages/OurServices/LiveProject/LiveProject.js";
 import Blog from "./pages/Blogs/Blog.js";
 import Associate from "./pages/Associates/Associate.js";
+import Language from "./components/C-Page/Language.js";
 
 import './App.css';
 
@@ -67,58 +68,58 @@ function App() {
   const hideLayout = location.pathname === "/thankyou";
 
   return (
-   
 
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <ScrollToTop />
 
-        {!hideLayout && <Header darkMode={darkMode} setDarkMode={setDarkMode} />}
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <ScrollToTop />
 
-         <div style={{ position: 'relative', overflowX: 'hidden' }} onClick={hideMessage} >
-      {/* Welcome Message in the Center */}
-      {showMessage && (
-        <div
-          style={{
-            position: 'fixed',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            backgroundColor: 'transparent',
-            color: '#fff',
-            textAlign: 'center',
-            marginTop: '50px',
-            fontSize: window.innerWidth < 600 ? '1.4rem' : '3rem', // Much smaller font on mobile
-            fontWeight: 'bold',
-            padding: window.innerWidth < 600 ? '10px 3px' : '20px 5px', // Smaller padding on mobile
-            borderRadius: '12px',
-            zIndex: 1000,
-            cursor: 'pointer',
-            minHeight: window.innerWidth < 400 ? '180px' : '180px',
-            width: window.innerWidth < 400 ? '80%' : 'auto', // Smaller width on mobile
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-          onClick={hideMessage}
-        >
-          <Box
-            component="img"
-            src="./text1.png"
-            alt={"Sanjay"}
-            sx={{
-              width: isMobile ? '80%' : '80%', // Ensure proper width
-              maxHeight: '500px',
-              boxShadow: '0 6px 12px rgb(8, 44, 41), 0 16px 32px rgb(9, 46, 41)',
-              borderRadius: '10px',
-              display: 'block',
-              mx: 'auto', // Ensures the image is centered on all screen sizes
+      {!hideLayout && <Header darkMode={darkMode} setDarkMode={setDarkMode} />}
+
+      <div style={{ position: 'relative', overflowX: 'hidden' }} onClick={hideMessage} >
+        {/* Welcome Message in the Center */}
+        {showMessage && (
+          <div
+            style={{
+              position: 'fixed',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              backgroundColor: 'transparent',
+              color: '#fff',
+              textAlign: 'center',
+              marginTop: '50px',
+              fontSize: window.innerWidth < 600 ? '1.4rem' : '3rem', // Much smaller font on mobile
+              fontWeight: 'bold',
+              padding: window.innerWidth < 600 ? '10px 3px' : '20px 5px', // Smaller padding on mobile
+              borderRadius: '12px',
+              zIndex: 1000,
+              cursor: 'pointer',
+              minHeight: window.innerWidth < 400 ? '180px' : '180px',
+              width: window.innerWidth < 400 ? '80%' : 'auto', // Smaller width on mobile
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
-          />
+            onClick={hideMessage}
+          >
+            <Box
+              component="img"
+              src="./text1.png"
+              alt={"Sanjay123"}
+              sx={{
+                width: isMobile ? '80%' : '80%', // Ensure proper width
+                maxHeight: '500px',
+                boxShadow: '0 6px 12px rgb(8, 44, 41), 0 16px 32px rgb(9, 46, 41)',
+                borderRadius: '10px',
+                display: 'block',
+                mx: 'auto', // Ensures the image is centered on all screen sizes
+              }}
+            />
 
 
-        </div>
-      )}
+          </div>
+        )}
 
 
         <Routes>
@@ -131,15 +132,19 @@ function App() {
           <Route path="/associate" element={<Associate />} darkMode={darkMode} setDarkMode={setDarkMode} />
           {/* aur bhi nested routes bana sakte ho */}
 
+          <Route
+            path="/language"
+            element={<Language darkMode={darkMode} setDarkMode={setDarkMode} />}
+          />
 
           <Route path="/testimonials" element={<Test />} darkMode={darkMode} setDarkMode={setDarkMode} />
           <Route path="/thankyou" element={<ThankYou />} darkMode={darkMode} setDarkMode={setDarkMode} />
         </Routes>
 
-            </div>
+      </div>
 
-        {!hideLayout && <Footer darkMode={darkMode} setDarkMode={setDarkMode} />}
-      </ThemeProvider>
+      {!hideLayout && <Footer darkMode={darkMode} setDarkMode={setDarkMode} />}
+    </ThemeProvider>
 
   );
 }

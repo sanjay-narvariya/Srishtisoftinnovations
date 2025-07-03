@@ -73,6 +73,11 @@ export default function Internship() {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const navigate = useNavigate(); // 👈 navigation hook
 
+    const handleSubmit =()=>{
+        navigate('/language');
+        alert("Welcome");
+    }
+
     return (<>
         <Box sx={{ paddingTop: isMobile ? '50px' : '130px', background: 'transparent', position: 'relative', overflow:isMobile? 'hidden':'visible', }}>
             <Grid container spacing={2} display="flex" flexDirection={isMobile ? "column" : "row"} alignItems="center" justifyContent="flex-start" >
@@ -191,6 +196,7 @@ export default function Internship() {
                             </Typography>
                             <Button
                                 variant="contained"
+                                onClick={handleSubmit}
                                 sx={{
                                     background: 'linear-gradient(to right, #eeeeee, #ffffff)',
                                     borderRadius: '30px',

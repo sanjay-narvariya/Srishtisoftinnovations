@@ -14,7 +14,12 @@ const trainings = [
     {
         title: 'STAMP-PAD',
         desc: 'While working on the website for a stamp pad manufacturing company, my main objective was to build a clean, responsive, and informative platform that reflects the company’s professionalism and product quality.',
-        video: '/videos/sanjay1.mkv',
+        video: '/videos/sanjay1.webm',
+    },
+    {
+        title: 'STAMP-PAD ADMIN PART',
+        desc: 'This is Admin part of Stampad project , While working on this for a stamp pad manufacturing company, my main objective was to build a clean, responsive, and informative platform that reflects the company’s professionalism and product quality.',
+        video: '/videos/sanjay2.webm',
     },
     {
         title: 'SRISHTISOFT INOVATIONS',
@@ -197,7 +202,7 @@ export default function LiveProject() {
                                         borderRadius: '15px',
                                     }}
                                 />
-                            ) : item.title === 'STAMP-PAD' || item.title === 'QUICKCOMM' || item.title === 'FOODPROJECT' ? (
+                            ) : item.title === 'STAMP-PAD'||item.title === 'STAMP-PAD ADMIN PART' || item.title === 'QUICKCOMM' || item.title === 'FOODPROJECT' ? (
                                 <video
                                     src={item.video}
                                     autoPlay
